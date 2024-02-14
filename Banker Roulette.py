@@ -1,4 +1,4 @@
-
+#This code helps to pick out a random person from a list of people, and that person has to pay the bill among the friends at restaurant.
 names_string = input()
 names = names_string.split(", ")
 import random
