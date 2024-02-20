@@ -13,6 +13,5 @@ letter = position[0].lower()
 letter_index = abc.index(letter)
 
 map[number_index][letter_index] = "X"
-
-
 print(f"{line1}\n{line2}\n{line3}")
+
