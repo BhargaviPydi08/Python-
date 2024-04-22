@@ -318,12 +318,19 @@ while not end_of_game:
     # guessed "p" and the chosen word was "apple", then display should 
     # be ["_", "p", "p", "_", "_"].
 
+    #task - 4-2 : If the user enters a letter that they have already
+    #guessed right, print the letter and let them know.
+
+    if guess in display:
+        print(f"You have already guessed {guess} ")
+
     for index in range(len(chosen_word)):
         if chosen_word[index] == guess:
             display[index] = chosen_word[index]
             print(f"Current position :{index}\n current letter :{guess}")
     # task 2-1 - deducting lives if the letter is wrong
     if guess not in chosen_word:
+        print("You've guessed the letter that's not in the word")
         lives -= 1
         if lives == 0:
             end_of_game = True
